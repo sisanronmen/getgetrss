@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=C:\Users\azco-virt-02\Desktop\rs\env1"
+set "VIRTUAL_ENV=C:\getgetrss\rs\env1"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"

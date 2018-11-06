@@ -1,5 +1,6 @@
-import feedparser
+
 import pandas as pd
+import feedparser
 import time
 import datetime
 import sqlite3
@@ -7,13 +8,9 @@ import sqlite3
 
 
 def main():
-    $conn=sqlite3.connect(r"C:\Users\azco-virt-02\Desktop\sqlite-tools-win32-x86-3250200\test")
-    #cursor=conn.cursor()
-    #cursor.execute("insert into rssTbl values('日経新聞 速報','https://www.nikkei.com/news/category/','2018/11/5  1:51:00',0,1)")
     pds=getFeed()
-    with sqlite3.connect(r"C:\Users\azco-virt-02\Desktop\sqlite-tools-win32-x86-3250200\test") as conn:
-        pds.to_sql('rssTbl',conn,if_exists="replace")
-        #pds.to_csv("test2.csv",encoding="shift_jis")
+    with sqlite3.connect(r"..\mybook\db.sqlite3") as conn:
+        pds.to_sql('cms_getrss',conn,if_exists="replace",index=False)
         conn.commit
 
 def getFeed():
