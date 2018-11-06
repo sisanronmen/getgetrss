@@ -23,6 +23,7 @@ def getFeed():
     lists.append("https://assets.wor.jp/rss/rdf/nikkei/markets.rdf")
     lists.append("https://assets.wor.jp/rss/rdf/nikkei/technology.rdf")
     lists.append("https://assets.wor.jp/rss/rdf/reuters/stock.rdf")
+    lists.append("https://assets.wor.jp/rss/rdf/reuters/economy.rdf")
 
     rssList = []
     for i,l in enumerate(lists):
